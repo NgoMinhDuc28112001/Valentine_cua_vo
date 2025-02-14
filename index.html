@@ -26,20 +26,46 @@
         transform: translateY(-10px);
       }
     }
+
+    @media (max-width: 768px) {
+      #valentineQuestion {
+        font-size: 2rem;
+      }
+      #yesButton, #noButton {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+      }
+      #imageDisplay {
+        height: 200px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      #valentineQuestion {
+        font-size: 1.5rem;
+      }
+      #yesButton, #noButton {
+        font-size: 0.875rem;
+        padding: 0.25rem 0.5rem;
+      }
+      #imageDisplay {
+        height: 150px;
+      }
+    }
   </style>
 </head>
 <body class="gradient-background">
   <div class="flex items-center justify-center h-screen">
     <div class="flex flex-col items-center p-4">
-      <img id="imageDisplay" src="./images/image1.gif" alt="Cute kitten with flowers" class="rounded-md h-[300px]" style="object-fit: cover;" />
+      <img id="imageDisplay" src="./images/image1.gif" alt="Cute kitten with flowers" class="rounded-md h-[30vh]" style="object-fit: cover;" />
       <h2 id="valentineQuestion" class="text-4xl font-bold italic text-[#bd1e59] my-4">Vợ sẽ là Valentine cụa anh chớ???</h2>
       <div class="flex gap-4 pt-[20px] items-center" id="responseButtons">
         <button id="yesButton"
-          class="bounce2 inline-flex items-center justify-center whitespace-nowrap rounded-md text-[20px] font-medium disabled:pointer-events-none disabled:opacity-50 hover:bg-green-400 min-h-12 min-w-[75px] px-4 py-2 bg-green-500 text-white transition">
+          class="bounce2 inline-flex items-center justify-center whitespace-nowrap rounded-md text-[2vw] font-medium disabled:pointer-events-none disabled:opacity-50 hover:bg-green-400 min-h-12 min-w-[15vw] px-4 py-2 bg-green-500 text-white transition">
           Vâng
         </button>
         <button id="noButton"
-          class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-[20px] font-medium transition disabled:pointer-events-none disabled:opacity-50 hover:bg-red-700 h-12 min-w-[75px] w-auto px-4 py-2 bg-red-500 text-white">
+          class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-[2vw] font-medium transition disabled:pointer-events-none disabled:opacity-50 hover:bg-red-700 h-12 min-w-[15vw] w-auto px-4 py-2 bg-red-500 text-white">
           Hong
         </button>
       </div>
